@@ -5,23 +5,24 @@ import { SITE } from "../data/site";
 
 <Base
   title="Contact"
-  description="Text us about your website — we respond fast and give straight answers. Serving Nixa, Ozark, Springfield, Republic, and Battlefield."
+  description="Email us about your website — we respond fast and give straight answers. Serving Nixa, Ozark, Springfield, Republic, and Battlefield."
 >
   <section class="section">
     <div class="wrap">
       <p class="kicker">Contact</p>
-      <h1>Text first. We'll take it from there.</h1>
+      <h1>Email us. We'll take it from there.</h1>
       <p class="lead">
-        We're a working studio, not a call center — texting gets you an answer
-        fastest, usually the same day.
+        We're a working studio, not a call center — email gets you a thought-out
+        answer, usually the same day. No sales calls, ever.
       </p>
 
       <div class="grid grid-2">
         <div class="card">
           <h3>Start the conversation</h3>
-          <p class="big-phone"><a href={`sms:${SITE.phone}`}>{SITE.phoneDisplay}</a></p>
+          <p class="big-phone"><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+          <p class="muted-note">Prefer a person? Write Peter directly: <a href={`mailto:${SITE.emailPersonal}`}>{SITE.emailPersonal}</a></p>
           <p>Serving {SITE.serviceArea} — and remote-friendly beyond it.</p>
-          <a class="btn btn-primary" href={`sms:${SITE.phone}`}>Text us now</a>
+          <a class="btn btn-primary" href={`mailto:${SITE.email}`}>Email us</a>
         </div>
         <div class="card">
           <h3>What to include</h3>
@@ -44,7 +45,7 @@ import { SITE } from "../data/site";
 <style>
   .big-phone a {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 800;
     text-decoration: none;
   }

@@ -4,9 +4,10 @@ export const SITE = {
   tagline: "Fast, tested websites for Springfield-area businesses",
   phone: "417-827-4795",
   phoneDisplay: "(417) 827-4795",
-  textFirst: true, // Peter answers texts, not unknown calls
+  contactPref: "email", // Peter: no calls, no texts — email first
   serviceArea: "Nixa · Ozark · Springfield · Republic · Battlefield",
   city: "Nixa, Missouri",
-  // No email until the domain exists AND a live delivery test passes.
-  email: null as string | null,
+  // Both addresses live-delivery-tested 2026-07-18 (inbound + outbound to Proton).
+  email: "hello@417webco.com",
+  emailPersonal: "peter@417webco.com",
 };

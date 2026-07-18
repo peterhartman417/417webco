@@ -6,7 +6,7 @@ interface Props {
 }
 const {
   heading = "Ready for a website that actually works for you?",
-  sub = "Text us what you do and what you have today. You'll get a straight answer about what it would take — no sales call, no pressure.",
+  sub = "Email us what you do and what you have today. You'll get a straight answer about what it would take — no sales call, no pressure.",
 } = Astro.props;
 ---
 
@@ -16,7 +16,7 @@ const {
       <h2>{heading}</h2>
       <p>{sub}</p>
     </div>
-    <a class="btn" href={`sms:${SITE.phone}`}>Text {SITE.phoneDisplay}</a>
+    <a class="btn" href={`mailto:${SITE.email}`}>Email {SITE.email}</a>
   </div>
 </section>
 
