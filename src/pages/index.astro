@@ -1,0 +1,98 @@
+---
+import Base from "../layouts/Base.astro";
+import CTABand from "../components/CTABand.astro";
+import { SITE } from "../data/site";
+---
+
+<Base
+  title="Fast, tested websites for Springfield-area businesses"
+  description="Local web studio in Nixa, MO. Flat-rate websites with no monthly page-builder fees — built by an engineer with 15 years of QA and infrastructure experience."
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">{SITE.serviceArea}</p>
+      <h1>Your business deserves better than a $45/month template.</h1>
+      <p class="lead">
+        We build fast, modern websites for Springfield-area businesses — flat rates
+        at about half a typical agency quote, tested like software, and yours to
+        keep. Our hosting costs are nearly zero, so your monthly fee buys actual
+        updates — not server rent.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href={`sms:${SITE.phone}`}>Text {SITE.phoneDisplay}</a>
+        <a class="btn btn-ghost" href="/work">See our work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-band">
+    <div class="wrap">
+      <div class="stat"><b>15 yrs</b><span>professional QA &amp; engineering</span></div>
+      <div class="stat"><b>85%</b><span>lighter pages after a typical rebuild</span></div>
+      <div class="stat"><b>86</b><span>automated tests on our last build</span></div>
+      <div class="stat"><b>$0/mo</b><span>hosting for most sites we build</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">Why us</p>
+      <h2>Built like software, not like a brochure.</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Actually tested</h3>
+          <p>
+            Before starting this studio, we spent seven years as the sole QA engineer
+            on a high-traffic federal government website. Every site we ship comes
+            with an automated test suite that runs before every single update.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fast where it counts</h3>
+          <p>
+            Google ranks fast sites higher, and customers bounce from slow ones. We
+            build static-first sites that load in a blink on a phone in a parking
+            lot — our last rebuild cut page weight by 85%.
+          </p>
+        </div>
+        <div class="card">
+          <h3>You own everything</h3>
+          <p>
+            Your domain, your content, your code. If we disappeared tomorrow, your
+            site keeps running and any developer could pick it up. Compare that to
+            a page-builder subscription that holds your site hostage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <p class="kicker">Recent work</p>
+      <h2>A rebuild that paid for itself.</h2>
+      <div class="grid grid-2 feature">
+        <div class="shot"><img src="/images/aps_home_desktop.png" alt="Rebuilt contractor website homepage" loading="lazy" /></div>
+        <div>
+          <h3>Springfield outdoor contractor</h3>
+          <p>
+            They were paying $45 every month for a slow, agency-locked site that cost
+            $6,000 to build — and still shipped with placeholder pages and typos.
+            We rebuilt it in a day: 17 pages, 85% lighter, per-city landing pages
+            for local search, and $0/month hosting.
+          </p>
+          <p><a href="/work">Read the full story →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABand />
+</Base>
+
+<style>
+  .hero { padding: 5rem 0 4rem; }
+  .hero h1 { max-width: 18ch; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
+  .feature { align-items: center; }
+</style>

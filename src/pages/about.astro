@@ -1,0 +1,61 @@
+---
+import Base from "../layouts/Base.astro";
+import CTABand from "../components/CTABand.astro";
+import { SITE } from "../data/site";
+---
+
+<Base
+  title="About"
+  description="A local Nixa, MO web studio built on 15 years of professional QA and infrastructure engineering, including seven years on a federal government website."
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">About</p>
+      <h1>An engineer's web studio, not a marketing agency.</h1>
+      <div class="grid grid-2 body">
+        <div>
+          <p class="lead">
+            {SITE.name} is a local, family-run studio in {SITE.city}.
+          </p>
+          <p>
+            Before this studio, our founder spent fifteen years making software work:
+            seven of them solely responsible for quality on a high-traffic federal
+            government website, on a fully remote engineering team — writing automated
+            test suites that ran on every release, and authoring QA process
+            documentation that helped the company earn CMMI Level&nbsp;3 certification.
+          </p>
+          <p>
+            Today that same discipline goes into small-business websites: static-first
+            builds that load instantly, automated tests before every update, structured
+            data that helps Google understand your business, and infrastructure that's
+            monitored and backed up — with restores actually tested, not assumed.
+          </p>
+          <p>
+            We're local, we respond fastest by text, and we'll always tell you the
+            truth about what you need — including when the answer is "your current
+            site is fine, don't pay anyone to rebuild it."
+          </p>
+        </div>
+        <div class="card signals">
+          <h3>Why businesses trust us</h3>
+          <ul>
+            <li><b>15 years</b> professional engineering experience</li>
+            <li><b>7 years</b> sole QA owner of a federal government website</li>
+            <li><b>CMMI Level 3</b> process documentation author</li>
+            <li><b>Every build tested</b> — automated suite runs before each update</li>
+            <li><b>Local</b> — {SITE.city}, serving the whole 417</li>
+            <li><b>Open source</b> — no license fees ever passed to you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABand />
+</Base>
+
+<style>
+  .body { align-items: start; }
+  .signals ul { padding-left: 1.2rem; color: var(--ink-soft); }
+  .signals li { margin-bottom: 0.55rem; }
+</style>

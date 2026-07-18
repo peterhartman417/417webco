@@ -1,0 +1,100 @@
+---
+import Base from "../layouts/Base.astro";
+import CTABand from "../components/CTABand.astro";
+---
+
+<Base
+  title="Our work"
+  description="Case studies: a contractor site rebuild that cut page weight 85%, and a statewide club platform with events, maps, and a mobile app experience."
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">Case studies</p>
+      <h1>Real sites, real numbers.</h1>
+      <p class="lead">
+        Client names available on request — we'd rather show you what changed than
+        drop names without asking them first.
+      </p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap card study">
+      <div class="grid grid-2">
+        <div>
+          <p class="kicker">Site rescue &amp; rebuild</p>
+          <h2>Springfield outdoor contractor</h2>
+          <p>
+            A local lawn, landscaping, and drainage contractor was locked into an
+            agency-built page-builder site: <b>$6,000 up front, $45 every month</b>,
+            and they couldn't touch their own content. The site shipped with
+            placeholder "John Doe" pages indexed by Google, copy-paste errors,
+            typos on the homepage, and an 8.6&nbsp;MB page weight.
+          </p>
+          <ul>
+            <li><b>Rebuilt in a day</b> — 17 pages, including six per-city landing pages for local search</li>
+            <li><b>8.6 MB → 1.35 MB</b> page weight (85% lighter, dramatically faster on phones)</li>
+            <li><b>86 automated tests</b> run before every update goes live</li>
+            <li><b>$45/mo → $0/mo</b> hosting; the client owns the code and content</li>
+            <li>Structured data for Google (LocalBusiness), light and dark mode</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="shot"><img src="/images/aps_home_desktop.png" alt="Contractor site homepage, desktop" loading="lazy" /></div>
+          <div class="shot-row">
+            <div class="shot"><img src="/images/aps_services_desktop.png" alt="Services page" loading="lazy" /></div>
+            <div class="shot narrow"><img src="/images/aps_home_mobile.png" alt="Mobile homepage" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap card study">
+      <div class="grid grid-2">
+        <div>
+          <p class="kicker">Custom platform</p>
+          <h2>Statewide RV club website</h2>
+          <p>
+            A statewide member club needed more than a brochure — they needed a
+            private club website their members (many retired, many on phones)
+            would actually use. We designed, built, and operate the whole thing.
+          </p>
+          <ul>
+            <li><b>Interactive event map</b> — rally locations, state-park and campground layers, live weather radar</li>
+            <li><b>Events with RSVP</b> and a group chat per event, auto-sorted by date</li>
+            <li><b>44+ back issues</b> of the club magazine digitized into readable articles</li>
+            <li><b>Accessibility mode</b> with large-text settings for older members</li>
+            <li><b>Phone-app experience</b> — home-screen icon, unread badges, mobile navigation</li>
+            <li>Runs on infrastructure we manage: monitored, backed up, restore-tested</li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="shot"><img src="/images/arclub_map.png" alt="Interactive club event map" loading="lazy" /></div>
+          <div class="shot-row">
+            <div class="shot"><img src="/images/arclub_events_home.png" alt="Club events page" loading="lazy" /></div>
+            <div class="shot narrow"><img src="/images/arclub_mobile.png" alt="Mobile club site" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap grid grid-2">
+      <div class="shot"><img src="/images/arclub_blueberet.png" alt="Digitized magazine issue" loading="lazy" /></div>
+      <div class="shot"><img src="/images/arclub_recipes.png" alt="Club recipe book feature" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <CTABand heading="Want numbers like these for your site?" />
+</Base>
+
+<style>
+  .study { margin-bottom: 1.5rem; }
+  .study ul { padding-left: 1.2rem; color: var(--ink-soft); }
+  .study li { margin-bottom: 0.45rem; }
+  .shots { display: flex; flex-direction: column; gap: 1rem; }
+  .shot-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; }
+</style>

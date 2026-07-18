@@ -1,0 +1,157 @@
+---
+import Base from "../layouts/Base.astro";
+import CTABand from "../components/CTABand.astro";
+---
+
+<Base
+  title="Services & pricing"
+  description="Flat-rate website builds at about half typical agency pricing, plus a $45/month care plan that includes real work — for Springfield-area small businesses."
+>
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">Services</p>
+      <h1>About half what an agency quotes. Flat. In writing.</h1>
+      <p class="lead">
+        Around here a professionally built small-business site runs $2,000–$6,000,
+        then $50–195 every month for "maintenance." We build lean — so we can charge
+        about half that and still put more actual work into your site.
+      </p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap grid grid-3">
+      <div class="card price">
+        <h3>Starter site</h3>
+        <p class="band">$1,200 <span>flat</span></p>
+        <p class="compare">Typical agency: $2,000–2,500</p>
+        <ul>
+          <li>Up to 5 pages, mobile-first</li>
+          <li>Contact that goes straight to your phone</li>
+          <li>Google Business Profile setup</li>
+          <li>Structured data for local search</li>
+        </ul>
+        <p class="fit">For: a business that needs a real web presence this month.</p>
+      </div>
+      <div class="card price featured">
+        <h3>Business site</h3>
+        <p class="band">$2,900 <span>flat</span></p>
+        <p class="compare">Typical agency: $5,000–6,000+</p>
+        <ul>
+          <li>Up to 15 pages</li>
+          <li>Per-city landing pages for local SEO</li>
+          <li>Reviews section, photo gallery</li>
+          <li>Full automated test suite in CI</li>
+        </ul>
+        <p class="fit">For: contractors and services competing across the metro.</p>
+      </div>
+      <div class="card price">
+        <h3>Site rescue</h3>
+        <p class="band">$1,900 <span>flat</span></p>
+        <p class="compare">Typical rebuild quote: $4,000+</p>
+        <ul>
+          <li>Escape page-builder monthly fees</li>
+          <li>Full rebuild, content preserved</li>
+          <li>Speed and defect audit included</li>
+          <li>You keep your domain and rankings</li>
+        </ul>
+        <p class="fit">For: anyone paying rent on a site they don't control.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap card care">
+      <div class="care-grid">
+        <div>
+          <p class="kicker">Most clients choose this</p>
+          <h3>Care plan — $45/month</h3>
+          <p>
+            The going rate for a website care plan is $95–195 a month — and most of
+            those don't include any actual work. Ours is $45 and does: content and
+            photo updates when you text them in, uptime monitoring, backups,
+            security updates, and your domain renewals handled.
+          </p>
+        </div>
+        <ul>
+          <li>Content &amp; photo edits (just text them in)</li>
+          <li>Uptime monitoring with real alerting</li>
+          <li>Backups + software/security updates</li>
+          <li>Domain &amp; renewals managed</li>
+          <li>Cancel anytime — the site is yours either way</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">The math</p>
+      <h2>Three years, side by side.</h2>
+      <div class="grid grid-2">
+        <div class="card math">
+          <h3>Typical agency deal</h3>
+          <p class="big">$7,600+</p>
+          <p>$6,000 build + $45/month platform fee, forever. You can't edit your own
+          site, and if you stop paying, it disappears. (This is a real local example.)</p>
+        </div>
+        <div class="card math ours">
+          <h3>Our equivalent</h3>
+          <p class="big">$4,520</p>
+          <p>$2,900 build + $45/month care that includes actual updates. Or skip the
+          care plan entirely and pay $2,900 once — the site still runs, because
+          you own it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2>Four steps, no meetings required.</h2>
+      <div class="grid grid-2">
+        <div class="card"><h3>1 · Text us</h3><p>Tell us what you do and what you have today (or don't have). We'll look at it and reply with a straight assessment.</p></div>
+        <div class="card"><h3>2 · Flat quote</h3><p>One number for the whole build. If we find problems with your current site, you get the defect list either way.</p></div>
+        <div class="card"><h3>3 · Build &amp; review</h3><p>You get a private preview link. We revise until it's right — tested on real phones, not just a desktop.</p></div>
+        <div class="card"><h3>4 · Handover</h3><p>Site goes live on your domain. You own everything and get a plain-English guide to updating your content.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <CTABand heading="Got an agency quote sitting in your inbox?" sub="Text it to us. We'll tell you what we'd charge for the same thing — usually about half." />
+</Base>
+
+<style>
+  .price ul { padding-left: 1.2rem; color: var(--ink-soft); min-height: 8.5rem; }
+  .price li { margin-bottom: 0.4rem; }
+  .band {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+  .band span { font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); }
+  .compare {
+    font-size: 0.85rem;
+    color: var(--warm);
+    font-weight: 600;
+    margin-top: 0;
+  }
+  .fit { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+  .featured { border-color: var(--accent); border-width: 2px; }
+  .care { border-color: var(--warm); border-width: 2px; }
+  .care-grid { display: grid; gap: 1.5rem; }
+  @media (min-width: 760px) { .care-grid { grid-template-columns: 3fr 2fr; } }
+  .care ul { padding-left: 1.2rem; color: var(--ink-soft); margin: 0; }
+  .care li { margin-bottom: 0.45rem; }
+  .math .big {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0.2rem 0 0.5rem;
+  }
+  .math.ours { border-color: var(--accent); border-width: 2px; }
+  .math.ours .big { color: var(--accent); }
+</style>

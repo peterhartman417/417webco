@@ -1,0 +1,40 @@
+---
+import { SITE } from "../data/site";
+interface Props {
+  heading?: string;
+  sub?: string;
+}
+const {
+  heading = "Ready for a website that actually works for you?",
+  sub = "Text us what you do and what you have today. You'll get a straight answer about what it would take — no sales call, no pressure.",
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div class="wrap inner">
+    <div>
+      <h2>{heading}</h2>
+      <p>{sub}</p>
+    </div>
+    <a class="btn" href={`sms:${SITE.phone}`}>Text {SITE.phoneDisplay}</a>
+  </div>
+</section>
+
+<style>
+  .cta-band { background: var(--accent); color: var(--accent-ink); }
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .inner > div { flex: 1 1 24rem; }
+  .inner p { opacity: 0.9; margin: 0; max-width: 40rem; }
+  .btn {
+    background: var(--bg-raised);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+</style>
