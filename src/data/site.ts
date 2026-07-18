@@ -1,6 +1,7 @@
 // Single place to swap branding when the real name/domain is chosen.
 export const SITE = {
   name: "417 Web Co",
+  owner: "Peter Hartman", // one-man shop — first-person voice everywhere, per Peter 2026-07-18
   tagline: "Fast, tested websites for Springfield-area businesses",
   phone: "417-827-4795",
   phoneDisplay: "(417) 827-4795",
