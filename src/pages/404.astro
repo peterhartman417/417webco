@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../data/site";
+---
+
+<Base
+  title="Page not found"
+  description="That page doesn't exist. Head back to the 417 Web Co homepage."
+>
+  <section class="section">
+    <div class="wrap notfound">
+      <p class="kicker">404</p>
+      <h1>That page doesn't exist.</h1>
+      <p class="lead">
+        Either the link is old or I moved something. (If a link on this site
+        brought you here, <a href={`mailto:${SITE.email}`}>email me</a> — I'd
+        genuinely like to fix it.)
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/">Back to the homepage</a>
+        <a class="btn btn-ghost" href="/work">See my work</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .notfound { padding: 3rem 0 5rem; }
+  .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.75rem; }
+</style>

@@ -11,14 +11,54 @@ interface Props {
   description: string;
 }
 const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL("/images/og.png", Astro.site).href;
+const fullTitle = `${title} — ${SITE.name}`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: SITE.name,
+  founder: { "@type": "Person", name: SITE.owner },
+  description: SITE.tagline,
+  url: Astro.site?.href,
+  email: SITE.email,
+  image: ogImage,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Nixa",
+    addressRegion: "MO",
+    addressCountry: "US",
+  },
+  areaServed: ["Nixa MO", "Ozark MO", "Springfield MO", "Republic MO", "Battlefield MO"],
+  priceRange: "$$",
+};
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} — {SITE.name}</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="theme-color" content="#14557b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <script is:inline>
       const t = localStorage.getItem("theme");
       if (t) document.documentElement.dataset.theme = t;

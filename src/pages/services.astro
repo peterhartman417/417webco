@@ -5,7 +5,7 @@ import CTABand from "../components/CTABand.astro";
 
 <Base
   title="Services & pricing"
-  description="Flat-rate website builds at about half typical agency pricing, plus a $45/month care plan that includes real work — for Springfield-area small businesses."
+  description="Flat-rate website builds at about half typical agency pricing, plus a $45/month care plan with hosting included — for Springfield-area small businesses."
 >
   <section class="section">
     <div class="wrap">
@@ -13,14 +13,15 @@ import CTABand from "../components/CTABand.astro";
       <h1>About half what an agency quotes. Flat. In writing.</h1>
       <p class="lead">
         Around here a professionally built small-business site runs $2,000–$6,000,
-        then $50–195 every month for "maintenance." Those quotes carry a CEO, an
-        HR department, and a sales team. Mine carry one engineer — so I charge
-        about half and still put more actual work into your site.
+        then $50–195 every month for "maintenance." Those quotes carry a lot of
+        overhead. Mine carry one engineer — so I charge about half and still put
+        more actual work into your site.
       </p>
     </div>
   </section>
 
   <section class="section tight">
+    <h2 class="sr-only">Packages</h2>
     <div class="wrap grid grid-3">
       <div class="card price">
         <h3>Starter site</h3>
@@ -28,9 +29,10 @@ import CTABand from "../components/CTABand.astro";
         <p class="compare">Typical agency: $2,000–2,500</p>
         <ul>
           <li>Up to 5 pages, mobile-first</li>
-          <li>Contact that goes straight to your phone</li>
+          <li>Contact form that lands in your email</li>
           <li>Google Business Profile setup</li>
           <li>Structured data for local search</li>
+          <li>Automated tests run before every update</li>
         </ul>
         <p class="fit">For: a business that needs a real web presence this month.</p>
       </div>
@@ -39,6 +41,7 @@ import CTABand from "../components/CTABand.astro";
         <p class="band">$2,900 <span>flat</span></p>
         <p class="compare">Typical agency: $5,000–6,000+</p>
         <ul>
+          <li>Everything in Starter, plus:</li>
           <li>Up to 15 pages</li>
           <li>Per-city landing pages for local SEO</li>
           <li>Reviews section, photo gallery</li>
@@ -51,35 +54,43 @@ import CTABand from "../components/CTABand.astro";
         <p class="band">$1,900 <span>flat</span></p>
         <p class="compare">Typical rebuild quote: $4,000+</p>
         <ul>
+          <li>Full rebuild, up to 15 pages, reusing your existing content</li>
           <li>Escape page-builder monthly fees</li>
-          <li>Full rebuild, content preserved</li>
           <li>Speed and defect audit included</li>
-          <li>You keep your domain and rankings</li>
+          <li>URLs preserved, redirects mapped to protect your rankings</li>
+          <li>Same automated test suite as a new build</li>
         </ul>
-        <p class="fit">For: anyone paying rent on a site they don't control.</p>
+        <p class="fit">
+          For: anyone paying rent on a site they don't control. It costs less
+          than a Business build because your words and photos already exist —
+          the rebuild skips copywriting and discovery, not quality.
+        </p>
       </div>
     </div>
   </section>
 
   <section class="section tight">
+    <h2 class="sr-only">Ongoing care</h2>
     <div class="wrap card care">
       <div class="care-grid">
         <div>
           <p class="kicker">Most clients choose this</p>
           <h3>Care plan — $45/month</h3>
           <p>
-            The going rate for a website care plan is $95–195 a month — and most of
-            those don't include any actual work. Mine is $45 and does: content and
-            photo updates when you email them in, uptime monitoring, backups,
-            security updates, and your domain renewals handled.
+            The going rate for a website care plan is $95–195 a month — and most
+            of those don't spell out what you get. Mine is $45, hosting included,
+            and the scope is in writing, right here.
           </p>
         </div>
         <ul>
-          <li>Content &amp; photo edits (just email them in)</li>
+          <li><b>Hosting included</b> — fast, with SSL</li>
+          <li><b>Two batches of content &amp; photo edits a month</b> — just email them in</li>
+          <li><b>Two-business-day turnaround</b> on edits; broken-site fixes jump the queue</li>
           <li>Uptime monitoring with real alerting</li>
-          <li>Backups + software/security updates</li>
-          <li>Domain &amp; renewals managed</li>
-          <li>Cancel anytime — the site is yours either way</li>
+          <li>Backups you can download anytime + security updates</li>
+          <li>Domain renewals handled (registration fees billed at cost)</li>
+          <li>New pages or features quoted separately as small flat jobs</li>
+          <li>Cancel anytime — you keep the site, the code, and a copy of everything</li>
         </ul>
       </div>
     </div>
@@ -93,15 +104,17 @@ import CTABand from "../components/CTABand.astro";
         <div class="card math">
           <h3>Typical agency deal</h3>
           <p class="big">$7,600+</p>
-          <p>$6,000 build + $45/month platform fee, forever. You can't edit your own
-          site, and if you stop paying, it disappears. (This is a real local example.)</p>
+          <p>$6,000 build + $45/month platform fee, forever — and that $45 buys
+          hosting rent only, no updates. You can't edit your own site, and if you
+          stop paying, it disappears. (This is a real local example; care plans
+          that include actual updates run $95–195/month around here.)</p>
         </div>
         <div class="card math ours">
           <h3>My equivalent</h3>
           <p class="big">$4,520</p>
-          <p>$2,900 build + $45/month care — less than half the going monthly
-          rate, and it buys actual updates, monitoring, and backups instead of
-          platform rent. You own the site the whole time.</p>
+          <p>$2,900 build + $45/month care — hosting included, plus the monthly
+          updates, monitoring, and backups spelled out above. Less than half the
+          going monthly rate, and you own the site the whole time.</p>
         </div>
       </div>
     </div>
@@ -110,13 +123,65 @@ import CTABand from "../components/CTABand.astro";
   <section class="section">
     <div class="wrap">
       <p class="kicker">How it works</p>
-      <h2>Four steps, no meetings required.</h2>
+      <h2>Four steps, no meetings required (unless you want one).</h2>
       <div class="grid grid-2">
         <div class="card"><h3>1 · Email me</h3><p>Tell me what you do and what you have today (or don't have). I'll look at it and reply with a straight assessment.</p></div>
         <div class="card"><h3>2 · Flat quote</h3><p>One number for the whole build. If I find problems with your current site, you get the defect list either way.</p></div>
-        <div class="card"><h3>3 · Build &amp; review</h3><p>You get a private preview link. I revise until it's right — tested on real phones, not just a desktop.</p></div>
+        <div class="card"><h3>3 · Build &amp; review</h3><p>You get a private preview link and two full revision rounds — most sites only need one. Tested on real phones, not just a desktop.</p></div>
         <div class="card"><h3>4 · Handover</h3><p>Site goes live on your domain. You own everything and get a plain-English guide to updating your content.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">No surprises</p>
+      <h2>The fine print, in plain English.</h2>
+      <p class="lead">Most builds launch in two to four weeks.</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Paying</h3>
+          <p>50% deposit to start, the balance when your site goes live — after
+          you've seen it working on the preview link. The flat quote is the
+          price; there are no surprise line items. If we part ways mid-build,
+          you pay only for work already done.</p>
+        </div>
+        <div class="card">
+          <h3>Revisions</h3>
+          <p>Two full revision rounds are included in every build. After that,
+          changes are quoted as small flat jobs — there's no open-ended hourly
+          meter, in either direction.</p>
+        </div>
+        <div class="card">
+          <h3>What's included — and not</h3>
+          <p>I'll shape and polish the words and photos you give me. Copywriting
+          from scratch and professional photography aren't included — bring your
+          own or I'll source licensed stock at cost. Extra pages beyond your
+          package: $175 each, flat.</p>
+        </div>
+        <div class="card">
+          <h3>Handover &amp; warranty</h3>
+          <p>Every build ends with a written handover: the code repository
+          transferred to your name, the domain in your registrar account, and a
+          plain-English guide any developer could follow. Anything broken in the
+          first 30 days after launch, I fix free — care plan or not.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <p class="kicker">Beyond brochure sites</p>
+      <h2>Need more than pages and a contact form?</h2>
+      <p class="lead">
+        Members-only areas, interactive maps, event systems, publishing
+        workflows — that's the statewide club platform on my
+        <a href="/work">Work page</a>, which I designed, built, and still
+        operate. Projects like that don't fit a package, and I won't pretend
+        they do: email me what you're trying to run and I'll write you a custom
+        proposal.
+      </p>
     </div>
   </section>
 
@@ -144,7 +209,7 @@ import CTABand from "../components/CTABand.astro";
   .featured { border-color: var(--accent); border-width: 2px; }
   .care { border-color: var(--warm); border-width: 2px; }
   .care-grid { display: grid; gap: 1.5rem; }
-  @media (min-width: 760px) { .care-grid { grid-template-columns: 3fr 2fr; } }
+  @media (min-width: 760px) { .care-grid { grid-template-columns: 2fr 3fr; } }
   .care ul { padding-left: 1.2rem; color: var(--ink-soft); margin: 0; }
   .care li { margin-bottom: 0.45rem; }
   .math .big {

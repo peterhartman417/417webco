@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://417webco.com/sitemap-index.xml
