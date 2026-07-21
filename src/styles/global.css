@@ -1,46 +1,51 @@
-/* 417 Web Co — design tokens + base styles. Light + dark. */
+/* 417 Web Co — design tokens + base styles. Deep-teal brand, light + dark. */
 
 :root {
-  --bg: #f7f6f3;
-  --bg-raised: #ffffff;
-  --ink: #1c2733;
-  --ink-soft: #4c5a68;
-  --accent: #14557b;      /* Ozark river blue */
-  --accent-ink: #ffffff;
-  --accent-soft: #e3eef5;
-  --warm: #c07a2d;        /* sandstone */
-  --line: #dcd9d2;
-  --shadow: 0 2px 16px rgba(28, 39, 51, 0.08);
+  /* Brand scales — teal primary, burnt-orange complement (dark → light) */
+  --teal-900: #012527;
+  --teal-800: #002e30;
+  --teal-700: #003b3e;
+  --teal-500: #005a5e;
+  --teal-400: #017a80;
+  --orange-900: #411f02;
+  --orange-800: #4f2400;
+  --orange-700: #672f00;   /* preferred orange */
+  --orange-500: #9b4800;
+  --orange-400: #d36200;
+
+  /* Dark is the signature look — the default for everyone */
+  --bg: #012527;
+  --bg-raised: #05363a;
+  --ink: #e7f1f0;
+  --ink-soft: #a2b8b7;
+  --accent: #34b7bd;      /* brightened teal, legible as link text */
+  --accent-ink: #012527;
+  --accent-soft: #06403f;
+  --warm: #e07a2a;        /* brightened orange for dark bg */
+  --line: #12403f;
+  --shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+  --smoke:
+    radial-gradient(60% 50% at 15% 0%, rgba(1, 122, 128, 0.14), transparent 70%),
+    radial-gradient(50% 45% at 88% 8%, rgba(211, 98, 0, 0.07), transparent 70%),
+    radial-gradient(75% 60% at 50% 100%, rgba(0, 90, 94, 0.12), transparent 72%);
   --radius: 14px;
   --font-display: "Archivo Variable", system-ui, sans-serif;
   --font-body: "Inter Variable", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #131a21;
-    --bg-raised: #1b242e;
-    --ink: #e8ecf0;
-    --ink-soft: #a3b0bc;
-    --accent: #4da3d0;
-    --accent-ink: #0d1319;
-    --accent-soft: #1e3242;
-    --warm: #d99a52;
-    --line: #2b3743;
-    --shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #131a21;
-  --bg-raised: #1b242e;
-  --ink: #e8ecf0;
-  --ink-soft: #a3b0bc;
-  --accent: #4da3d0;
-  --accent-ink: #0d1319;
-  --accent-soft: #1e3242;
-  --warm: #d99a52;
-  --line: #2b3743;
-  --shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+/* Opt-in light theme via the header toggle — cool teal-tinted paper */
+:root[data-theme="light"] {
+  --bg: #f2f5f4;
+  --bg-raised: #ffffff;
+  --ink: #06232a;
+  --ink-soft: #4a5f60;
+  --accent: #005a5e;      /* teal-500, legible on white */
+  --accent-ink: #ffffff;
+  --accent-soft: #e0efef;
+  --warm: #672f00;        /* burnt orange */
+  --line: #d7e0de;
+  --shadow: 0 2px 16px rgba(1, 37, 39, 0.08);
+  --smoke: none;
 }
 
 * { box-sizing: border-box; }
@@ -52,6 +57,15 @@ body {
   font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.65;
+}
+/* Smoke wash — a fixed, non-interactive glow layer (dark theme only) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--smoke);
 }
 
 h1, h2, h3 {
