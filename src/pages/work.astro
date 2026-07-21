@@ -103,5 +103,10 @@ import CTABand from "../components/CTABand.astro";
   .study ul { padding-left: 1.2rem; color: var(--ink-soft); }
   .study li { margin-bottom: 0.45rem; }
   .shots { display: flex; flex-direction: column; gap: 1rem; }
-  .shot-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; }
+  /* Let each screenshot box hug its own image instead of stretching to match
+     the taller cell in the row — otherwise a short landscape shot next to a
+     tall portrait phone shot leaves dead space inside the bordered box. */
+  .shot-row { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; align-items: start; }
+  /* Same fix for the standalone two-up rows (recipes / magazine). */
+  .grid-2 { align-items: start; }
 </style>
