@@ -6,7 +6,15 @@ const year = new Date().getFullYear();
 <footer>
   <div class="wrap cols">
     <div>
-      <p class="brand">{SITE.name}</p>
+      <img
+        class="brand-logo"
+        src="/images/417webco-logo-360.png"
+        width="360"
+        height="150"
+        alt={SITE.name}
+        decoding="async"
+        loading="lazy"
+      />
       <p class="muted">{SITE.tagline}.</p>
       <p class="muted">A one-man shop — {SITE.owner}, {SITE.city}</p>
       <p class="muted">Serving {SITE.serviceArea}</p>
@@ -42,7 +50,17 @@ const year = new Date().getFullYear();
   @media (min-width: 760px) {
     .cols { grid-template-columns: 2fr 1fr 1.5fr; }
   }
-  .brand { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .brand-logo {
+    height: 54px;
+    width: auto;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  :root[data-theme="light"] .brand-logo {
+    background: var(--teal-900);
+    padding: 0.4rem 0.6rem;
+    border-radius: 12px;
+  }
   .muted { color: var(--ink-soft); font-size: 0.92rem; }
   .links { display: flex; flex-direction: column; gap: 0.45rem; }
   .links a { color: var(--ink-soft); text-decoration: none; font-weight: 600; }

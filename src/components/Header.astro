@@ -11,7 +11,16 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="/">{SITE.name}</a>
+    <a class="brand" href="/" aria-label={SITE.name}>
+      <img
+        class="brand-logo"
+        src="/images/417webco-logo-220.png"
+        width="220"
+        height="92"
+        alt={SITE.name}
+        decoding="async"
+      />
+    </a>
     <nav>
       {nav.map(([label, href]) => (
         <a href={href} class:list={{ active: path === href }}>{label}</a>
@@ -50,13 +59,22 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
     padding-bottom: 0.8rem;
   }
   .brand {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.15rem;
-    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
     margin-right: auto;
-    white-space: nowrap;
+    line-height: 0;
+  }
+  .brand-logo {
+    height: clamp(34px, 4.6vw, 44px);
+    width: auto;
+    display: block;
+  }
+  /* Cream letters need a dark backing on the white light-theme bar */
+  :root[data-theme="light"] .brand-logo {
+    background: var(--teal-900);
+    padding: 0.28rem 0.5rem;
+    border-radius: 10px;
   }
   nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
   nav a {
