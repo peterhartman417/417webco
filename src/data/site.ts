@@ -8,7 +8,7 @@ export const SITE = {
   contactPref: "email", // Peter: no calls, no texts — email first
   serviceArea: "Nixa · Ozark · Springfield · Republic · Battlefield",
   city: "Nixa, Missouri",
-  // Both addresses live-delivery-tested 2026-07-18 (inbound + outbound to Proton).
-  email: "hello@417webco.com",
-  emailPersonal: "peter@417webco.com",
+  // Public site standardizes on hire@ (mox mailbox added 2026-07-21, Screened ruleset).
+  // peter@ stays live for business cards / word of mouth — deliberately NOT shown on the site.
+  email: "hire@417webco.com",
 };
