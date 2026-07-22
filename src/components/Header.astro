@@ -1,12 +1,15 @@
 ---
 import { SITE } from "../data/site";
 const nav = [
-  ["Work", "/work"],
-  ["Services", "/services"],
-  ["About", "/about"],
-  ["Contact", "/contact"],
+  ["Work", "/work/"],
+  ["Services", "/services/"],
+  ["About", "/about/"],
+  ["Contact", "/contact/"],
 ];
-const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+// Normalize to a trailing slash so links match the canonical URLs (no 301 hop)
+const path = Astro.url.pathname.endsWith("/")
+  ? Astro.url.pathname
+  : Astro.url.pathname + "/";
 ---
 
 <header class="site-header">
@@ -23,7 +26,11 @@ const path = Astro.url.pathname.replace(/\/$/, "") || "/";
     </a>
     <nav>
       {nav.map(([label, href]) => (
-        <a href={href} class:list={{ active: path === href }}>{label}</a>
+        <a
+          href={href}
+          class:list={{ active: path === href }}
+          aria-current={path === href ? "page" : undefined}
+        >{label}</a>
       ))}
     </nav>
     <div class="actions">
