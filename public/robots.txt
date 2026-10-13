@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /handyman/
+Disallow: /wildcat/
 
 Sitemap: https://417webco.com/sitemap-index.xml
